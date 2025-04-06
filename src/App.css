@@ -1,1 +1,82 @@
-@import "tailwindcss";
+/* LoginForm.css */
+.login-form-container {
+    border: 2px solid #ff6b35;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-form-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    background: linear-gradient(
+      45deg,
+      #ff6b35,
+      #ff8e53,
+      #ffb347,
+      #ff6b35
+    );
+    background-size: 400%;
+    z-index: -1;
+    animation: fire-border 8s linear infinite;
+  }
+  
+  @keyframes fire-border {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .fire-animation {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .fire-animation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+  }
+  
+  .fire-animation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 107, 53, 0.2),
+      transparent
+    );
+    border-radius: inherit;
+    animation: fire-flicker 1.5s infinite;
+  }
+  
+  @keyframes fire-flicker {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }

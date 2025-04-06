@@ -1,5 +1,5 @@
 interface User {
-  id: number;
+  _id: string;
   firstName: string;
   lastName: string;
   email: string;
@@ -7,6 +7,7 @@ interface User {
   phoneNumber: string;
   address: string;
   password: string;
+  confirmPassword: string;
 }
 
 export default User;
